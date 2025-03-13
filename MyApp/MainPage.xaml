@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label
+                Text="Tenant Management System"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <HorizontalStackLayout Margin="20">
+                <Label Text="Username"
+              FontSize="18" />
+                <Entry Placeholder="Username"
+                       x:Name="username"
+                       WidthRequest="250" />
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Margin="20">
+                <Label Text="Password"
+                FontSize="18" />
+                <Entry x:Name="pass"
+                    Placeholder="Password"
+                        WidthRequest="250"/>
+            </HorizontalStackLayout>
+
+            
+            <Button
+                x:Name="CounterBtn"
+                Text="Log in" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnloginClicked"
+                HorizontalOptions="Fill" />
+
+            <Label
+                x:Name="loginstatus"
+                 Text="test" />    
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
