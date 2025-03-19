@@ -3,7 +3,6 @@
 using System.Xml;
 
 namespace MyApp;
-
 public partial class DashboardPage : ContentPage
 {
 	public DashboardPage()
@@ -23,39 +22,40 @@ public partial class DashboardPage : ContentPage
 
     private void OnTenantsClicked(object sender, EventArgs e)
     {
-        contentPanel.Content = new Label
-        {
-            Text = "Tenants Panel",
-            FontSize = 24,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
         contentPanel.Content = new TableView
         {
-            Intent = TableIntent.Data,
-            Root = new TableRoot("Table Title")
-    {
-        new TableSection("Section 1")
-        {
-            new TextCell { Text = "Row 1, Column 1", Detail = "Detail 1" },
-            new TextCell { Text = "Row 2, Column 1", Detail = "Detail 2" },
-            new TextCell { Text = "Row 3, Column 1", Detail = "Detail 3" }
-        },
-        new TableSection("Section 2")
-        {
-            new TextCell { Text = "Row 1, Column 2", Detail = "Detail 4" },
-            new TextCell { Text = "Row 2, Column 2", Detail = "Detail 5" },
-            new TextCell { Text = "Row 3, Column 2", Detail = "Detail 6" } 
-        }
-    }
-        };
+            Intent = TableIntent.Form,
+            Root = new TableRoot("Table Title") {
+                    new TableSection ("Section 1 Title") {
+                        new TextCell {
+                            Text = "TextCell Text1",
+                            Detail = "TextCell Detail"
+                        },
+                        new EntryCell {
+                            Label = "EntryCell:",
+                            Placeholder = "default keyboard",
+                            Keyboard = Keyboard.Default
+                        }
+                    },
+                    new TableSection ("Section 2 Title") {
+                        new EntryCell {
+                            Label = "Another EntryCell:",
+                            Placeholder = "phone keyboard",
+                            Keyboard = Keyboard.Telephone
+                        },
+                        new SwitchCell {
+                            Text = "SwitchCell:"
+                        }
+                    }
+                }
+        }; 
     }
 
     private void OnSettingsClicked(object sender, EventArgs e)
     {
         contentPanel.Content = new Label
         {
-            Text = "Settings Panel",
+            Text = "Settings Panell",
             FontSize = 24,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
