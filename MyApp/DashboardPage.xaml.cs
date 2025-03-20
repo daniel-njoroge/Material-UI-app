@@ -40,5 +40,14 @@ public partial class DashboardPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center
         };
+        contentPanel.Content = new Button
+        {
+            StyleId = "apartmentsbtn",
+            Text ="apartmentsbtn",
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Center
+        };
+
     }
+
 }

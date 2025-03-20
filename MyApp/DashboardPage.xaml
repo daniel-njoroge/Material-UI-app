@@ -3,10 +3,10 @@
              x:Class="MyApp.DashboardPage"
              Title="DashboardPage">
 
-    <!-- Grid Layout: Left Sidebar (250px) | Right Panel (Expands) -->
+    
     <Grid Padding="20" ColumnDefinitions="250, *" RowDefinitions="*,*,*">
 
-        <!-- Left Panel: Centered Buttons -->
+        
         <Grid Grid.Column="0" Grid.Row="0">
             <Button x:Name="apartmentsbtn"
                     Text="Apartments"
@@ -34,7 +34,7 @@
                     Clicked="OnSettingsClicked"/>
         </Grid>
 
-        <!-- Right Panel: Dynamic Content (Expands) -->
+        
         <ContentView x:Name="contentPanel"
                      Grid.Column="1"
                      Grid.RowSpan="3"
